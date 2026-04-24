@@ -35,7 +35,7 @@ def login():
     conn.close()
 
     if results:
-        html = "<h2>⚠️ Datos Encontrados ⚠️</h2>"
+        html = "<h2>Bienvenido " + user + "</h2>"
         html += "<h2>⚠️ Datos Encontrados ⚠️</h2>"
         html += "<table border='1' style='border-collapse: collapse; width: 98%; text-align: left;'>"
         html += "<tr style='background-color: #f2f2f2;'><th>ID</th><th>Username</th><th>Password</th><th>Email</th><th>Nombre</th><th>Teléfono</th><th>Dirección</th></tr>"
