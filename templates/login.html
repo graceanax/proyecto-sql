@@ -120,13 +120,15 @@
             <form method="POST" action="/login">
 
     <div class="mb-4">
+        <!-- Se usa autocomplete="username" para indicar al navegador que este campo corresponde a un usuario y se agrega required para que sea obligatorio -->
         <label for="user" class="form-label text-secondary">Username</label>
-        <input type="text" id="user" name="user" class="form-control" placeholder="Ingresa tu usuario">
+        <input type="text" id="user" name="user" class="form-control" placeholder="Ingresa tu usuario" required autocomplete="username">
     </div>
     
     <div class="mb-4">
+        <!-- Se usa autocomplete="current-password" para indicar al navegador que este campo corresponde a una contraseña y se agrega required para que sea obligatorio -->
         <label for="pass" class="form-label text-secondary">Password</label>
-        <input type="password" id="pass" name="pass" class="form-control" placeholder="********">
+        <input type="password" id="pass" name="pass" class="form-control" placeholder="********" required autocomplete="current-password">
     </div>
 
     <button type="submit" class="btn w-100 btn-ingresar shadow">
