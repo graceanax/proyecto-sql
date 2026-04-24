@@ -76,6 +76,15 @@ Para detener completamente el proyecto:
 docker compose down
 ```
 
+## SQLmap
+Comando para limpiar temporales
+```bash
+rm -rf ~/.local/share/sqlmap/output/127.0.0.1
+```
+Correr el test 
+```bash
+python3 sqlmap.py -u "http://127.0.0.1:5001/login" --forms --risk=3 --batch
+```
 ## Notas
 
 * Este proyecto es únicamente para fines educativos.
