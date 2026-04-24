@@ -25,12 +25,12 @@ def login():
     conn = conectar()
     cursor = conn.cursor()
 
-    # (Inyección SQL)
-    query = f"SELECT * FROM USUARIOS WHERE USERNAME = '{user}' AND PASSWORD = '{password}'"
+    # Consulta segura usando parámetros (previene SQL Injection)
+    query = "SELECT * FROM USUARIOS WHERE USERNAME = ? AND PASSWORD = ?"
     
     print(f"\n[!] SQL Ejecutado: {query}")
     
-    cursor.execute(query)
+    cursor.execute(query, (user, password))
     results = cursor.fetchall() 
     conn.close()
 
