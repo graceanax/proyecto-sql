@@ -1,0 +1,25 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Flask
+.env
+instance/
+
+# macOS
+.DS_Store
+
+# Docker
+*.log
+
+# SQLite
+# Si la BD es solo de prueba y quieres compartirla, NO ignores basedatos.db
+# Si contiene datos sensibles, sí ignórala:
+# *.db
+
+# IDEs
+.vscode/
+.idea/

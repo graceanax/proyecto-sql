@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Contenedor principal */
+        .login-notebook {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 15px 15px 0px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+            border: 1px solid #ddd;
+        }
+
+        /* Encabezado */
+        .notebook-header {
+            background-color: #004a99;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px 15px 0 0;
+            font-size: 2rem;
+            font-weight: 600;
+            border-bottom: 8px solid #222;
+        }
+
+        /* Anillos */
+        .ring {
+            position: absolute;
+            top: -20px;
+            width: 25px;
+            height: 50px;
+            background: linear-gradient(to right, #ccc, #fff, #ccc);
+            border: 2px solid #888;
+            border-radius: 15px;
+            z-index: 10;
+        }
+        .ring-left { left: 80px; }
+        .ring-right { right: 80px; }
+
+        /* Labels */
+        .form-label {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        /* Inputs grandes */
+        input.form-control {
+            font-size: 1.3rem;
+            padding: 15px;
+            height: 60px;
+            border-radius: 10px;
+        }
+
+        /* Efecto focus */
+        input.form-control:focus {
+            border-color: #4498f2;
+            box-shadow: 0 0 10px rgba(68, 152, 242, 0.3);
+        }
+
+        .links-container a {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+        }
+
+        /* Botón */
+        .btn-ingresar {
+            background-color: #4498f2;
+            font-size: 1.5rem;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: none;
+        }
+
+        .btn-ingresar:hover {
+            background-color: #2f7edb;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-notebook">
+        <!-- Anillos -->
+        <div class="ring ring-left"></div>
+        <div class="ring ring-right"></div>
+
+        <!-- Header -->
+        <div class="notebook-header text-uppercase">
+            Login
+        </div>
+
+        <!-- Formulario -->
+        <div class="p-5">
+            <form method="POST" action="/login">
+
+    <div class="mb-4">
+        <label for="user" class="form-label text-secondary">Username</label>
+        <input type="text" id="user" name="user" class="form-control" placeholder="Ingresa tu usuario">
+    </div>
+    
+    <div class="mb-4">
+        <label for="pass" class="form-label text-secondary">Password</label>
+        <input type="password" id="pass" name="pass" class="form-control" placeholder="********">
+    </div>
+
+    <button type="submit" class="btn w-100 btn-ingresar shadow">
+        Ingresar
+    </button>
+
+</form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
